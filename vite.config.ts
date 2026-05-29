@@ -17,6 +17,8 @@ export default defineConfig({
       },
     }),
     react(),
-    tsconfigPaths(),
+    tsconfigPaths({
+      root: process.cwd(),
+    }),
   ],
 });
