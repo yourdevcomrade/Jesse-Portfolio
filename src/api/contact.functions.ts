@@ -1,12 +1,11 @@
-import { createServerFn } from "@tanstack/start";
+import { createServerFn } from "@tanstack/react-start";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendContactEmail = createServerFn({ method: "POST" })
-  .validator((data: { name: string; email: string; company: string; projectDetails: string }) => data)
-  .handler(async ({ data }) => {
-    const { error } = await resend.emails.send({
+  .handler(async ({ data }: { data: { name: string; email: string; company: string; projectDetails: string } }) => {
+    const { data: result, error } = await resend.emails.send({
       from: "onboarding@resend.dev",
       to: "jesseadesoji@gmail.com",
       replyTo: data.email,
@@ -20,6 +19,9 @@ export const sendContactEmail = createServerFn({ method: "POST" })
         <p>${data.projectDetails}</p>
       `,
     });
+
+    console.log("Resend result:", result);
+    console.log("Resend error:", JSON.stringify(error, null, 2));
 
     if (error) throw new Error(error.message);
     return { success: true };
