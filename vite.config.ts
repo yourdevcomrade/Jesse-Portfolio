@@ -8,11 +8,7 @@ import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 export default defineConfig({
   plugins: [
     tailwindcss(),
-    tanstackStart({
-      server: {
-        preset: "vercel",
-      },
-    }),
+    tanstackStart(),
     tanstackRouter({
       plugin: {
         hmr: {
