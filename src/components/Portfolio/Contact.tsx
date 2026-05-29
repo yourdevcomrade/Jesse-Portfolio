@@ -177,9 +177,9 @@ export function Contact() {
           transition={{ duration: 0.6 }}
           className="lg:col-span-5"
         >
-          <p className="text-xs tracking-[0.2em] uppercase text-amber-300/80 mb-4">
+          {/* <p className="text-xs tracking-[0.2em] uppercase text-amber-300/80 mb-4">
             Contact
-          </p>
+          </p> */}
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight leading-[1.05]">
             Have a Project
             <br />
@@ -192,15 +192,15 @@ export function Contact() {
           </p>
 
           <div className="mt-10 space-y-5">
-            <a
+            {/* <a
               href="mailto:hello@jesseadesoji.dev"
               className="flex items-center gap-4 text-white/80 hover:text-white group"
             >
               <span className="h-10 w-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-amber-300/40 group-hover:text-amber-300 transition">
                 <Mail size={16} />
               </span>
-              hello@jesseadesoji.dev
-            </a>
+              jesseadesoji@gmail.com
+            </a> */}
             <div className="flex items-center gap-4 text-white/80">
               <span className="h-10 w-10 rounded-full border border-white/10 flex items-center justify-center">
                 <MapPin size={16} />

@@ -42,9 +42,9 @@ export function Projects() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
-            <p className="text-xs tracking-[0.2em] uppercase text-amber-300/80 mb-4">
+            {/* <p className="text-xs tracking-[0.2em] uppercase text-amber-300/80 mb-4">
               Selected work
-            </p>
+            </p> */}
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight leading-[1.05]">
               A handful of{" "}
               <span className="italic font-serif text-white/70">

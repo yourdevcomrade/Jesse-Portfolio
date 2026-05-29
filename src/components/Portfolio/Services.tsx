@@ -30,9 +30,9 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
           <div>
-            <p className="text-xs tracking-[0.2em] uppercase text-amber-300/80 mb-4">
+            {/* <p className="text-xs tracking-[0.2em] uppercase text-amber-300/80 mb-4">
               Services
-            </p>
+            </p> */}
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight max-w-2xl leading-[1.05]">
               What I help{" "}
               <span className="italic font-serif text-white/70">
