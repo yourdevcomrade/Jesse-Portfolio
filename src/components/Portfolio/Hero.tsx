@@ -86,10 +86,10 @@ export function Hero() {
           className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl border-t border-white/5 pt-10"
         >
           {[
-            ["6+", "Years building"],
-            ["40+", "Projects shipped"],
+            ["3+", "Years building"],
+            ["6+", "Projects shipped"],
             ["100%", "Client retention"],
-            ["12", "Industries served"],
+            ["4", "Industries served"],
           ].map(([k, v]) => (
             <div key={v}>
               <div className="text-2xl sm:text-3xl font-light text-white">
