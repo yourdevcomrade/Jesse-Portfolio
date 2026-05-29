@@ -4,11 +4,13 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
 import { tanstackRouter } from "@tanstack/router-plugin/vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import { nitro } from "nitro/vite";
 
 export default defineConfig({
   plugins: [
     tailwindcss(),
     tanstackStart(),
+    nitro({ preset: "vercel" }),
     tanstackRouter({
       plugin: {
         hmr: {
@@ -22,4 +24,3 @@ export default defineConfig({
     }),
   ],
 });
-
