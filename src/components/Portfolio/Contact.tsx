@@ -319,7 +319,7 @@ export function Contact() {
             disabled={sent || loading}
             className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-white text-black px-7 py-3.5 text-sm font-medium hover:bg-amber-200 transition-all duration-300 disabled:opacity-60"
           >
-            {sent ? "Message sent — talk soon" : loading ? "Sending…" : "Send message"}
+            {sent ? "Message sent. Talk soon" : loading ? "Sending…" : "Send message"}
             {!sent && !loading && (
               <Send
                 size={15}
