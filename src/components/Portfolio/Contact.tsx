@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import { Mail, MapPin, Send, AlertCircle, CheckCircle } from "lucide-react";
 import { useState } from "react";
+import { sendContactEmail } from "@/api/contact.functions";
 
 export function Contact() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -212,20 +215,29 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
             if (validateForm()) {
-              setSent(true);
-              setTimeout(() => {
-                setSent(false);
-                setFormData({
-                  name: "",
-                  email: "",
-                  company: "",
-                  projectDetails: "",
-                });
-                setTouched({});
-              }, 3000);
+              setLoading(true);
+              setSubmitError("");
+              try {
+                await sendContactEmail({ data: formData });
+                setSent(true);
+                setTimeout(() => {
+                  setSent(false);
+                  setFormData({
+                    name: "",
+                    email: "",
+                    company: "",
+                    projectDetails: "",
+                  });
+                  setTouched({});
+                }, 3000);
+              } catch (err) {
+                setSubmitError("Something went wrong. Please try again.");
+              } finally {
+                setLoading(false);
+              }
             }
           }}
           className="lg:col-span-7 rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur p-6 sm:p-10 space-y-5"
@@ -304,17 +316,20 @@ export function Contact() {
 
           <button
             type="submit"
-            disabled={sent}
+            disabled={sent || loading}
             className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-white text-black px-7 py-3.5 text-sm font-medium hover:bg-amber-200 transition-all duration-300 disabled:opacity-60"
           >
-            {sent ? "Message sent — talk soon" : "Send message"}
-            {!sent && (
+            {sent ? "Message sent — talk soon" : loading ? "Sending…" : "Send message"}
+            {!sent && !loading && (
               <Send
                 size={15}
                 className="group-hover:translate-x-0.5 transition-transform"
               />
             )}
           </button>
+          {submitError && (
+            <p className="text-xs text-red-500 mt-2">{submitError}</p>
+          )}
         </motion.form>
       </div>
     </section>
