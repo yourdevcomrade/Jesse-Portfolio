@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export function WhatsAppWidget() {
   return (
     <motion.a
-      href="https://wa.me/2348000000000?text=Hi%20Jesse%2C%20I%27d%20love%20to%20talk%20about%20a%20project."
+      href="https://wa.me/2349024765139?text=Hi%20Jesse%2C%20I%27d%20love%20to%20talk%20about%20a%20project."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
