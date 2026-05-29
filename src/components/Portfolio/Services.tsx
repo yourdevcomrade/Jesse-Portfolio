@@ -42,7 +42,9 @@ export function Services() {
             </h2>
           </div>
           <p className="text-white/55 max-w-sm">
-            From the first wireframe to the final deploy, I build digital infrastructure designed to drive business growth and bring your web products to life.
+            From the first wireframe to the final deploy, I build digital
+            infrastructure designed to drive business growth and bring your web
+            products to life.
           </p>
         </div>
 
@@ -59,9 +61,7 @@ export function Services() {
               <div className="h-11 w-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-amber-300 group-hover:bg-amber-300/10 group-hover:border-amber-300/30 transition-all">
                 <s.icon size={18} />
               </div>
-              <h3 className="mt-6 text-xl text-white font-medium">
-                {s.title}
-              </h3>
+              <h3 className="mt-6 text-xl text-white font-medium">{s.title}</h3>
               <p className="mt-3 text-sm text-white/55 leading-relaxed">
                 {s.desc}
               </p>

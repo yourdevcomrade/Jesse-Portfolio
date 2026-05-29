@@ -48,9 +48,10 @@ export function About() {
           <div className="mt-8 space-y-5 text-white/65 leading-relaxed max-w-xl">
             <p>
               I&apos;m Jesse Adesoji, a frontend developer and creative
-              technologist who treats web developmment as a high-performance business tool focused on building fast, modern and visually refined
-              digital experiences. I work at the intersection of design and
-              engineering, helping brands and businesses turn ideas into
+              technologist who treats web developmment as a high-performance
+              business tool focused on building fast, modern and visually
+              refined digital experiences. I work at the intersection of design
+              and engineering, helping brands and businesses turn ideas into
               polished web products that feel intentional at every touchpoint.
             </p>
             <p>
@@ -59,7 +60,8 @@ export function About() {
               and motion-driven UI.
             </p>
             <p>
-              My core stack centers on React, TypeScript, Tailwind, and Next.js. However, my real value lies in my systems-first methodology
+              My core stack centers on React, TypeScript, Tailwind, and Next.js.
+              However, my real value lies in my systems-first methodology
             </p>
             {/* <p>
               When I&apos;m not building, I&apos;m studying motion design,

@@ -49,7 +49,10 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="mt-8 max-w-xl text-base sm:text-lg text-white/60 leading-relaxed"
         >
-          Your digital product shouldn't just look premium, it needs to perform like it. I engineer high-converting, blazing-fast web experiences that capture attention, build immediate trust, and turn visitors into customers.
+          Your digital product shouldn't just look premium, it needs to perform
+          like it. I engineer high-converting, blazing-fast web experiences that
+          capture attention, build immediate trust, and turn visitors into
+          customers.
         </motion.p>
 
         <motion.div

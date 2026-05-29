@@ -25,7 +25,10 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="process" className="relative py-28 sm:py-36 border-y border-white/5">
+    <section
+      id="process"
+      className="relative py-28 sm:py-36 border-y border-white/5"
+    >
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
           <div>
@@ -42,7 +45,8 @@ export function Process() {
             </h2>
           </div>
           <p className="text-white/55 max-w-sm">
-            I follow a structured, systems-driven approach to get your product or store to market efficiently.
+            I follow a structured, systems-driven approach to get your product
+            or store to market efficiently.
           </p>
         </div>
 
